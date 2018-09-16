@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Software Engineer"
   #location         : "Islamabad"
-  email            : usman.akram.se@gmail.com
+  #email            : 
   uri              : "https://codingtumbleweed.github.io/blog/"
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
