@@ -1,4 +1,4 @@
-## Code Tumbles
+## [Code Tumbles](https://codingtumbleweed.github.io/blog/)
 
 This is my blog where I talk about software development, machine learning, data science and life in general.
 
