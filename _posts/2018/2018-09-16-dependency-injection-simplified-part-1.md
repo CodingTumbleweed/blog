@@ -216,7 +216,7 @@ class XmlSerialization : ISerialization
 ```csharp
 class BinarySerialization : ISerialization
 {
-	/// <summary>
+    /// <summary>
     /// Read Binary File and returns it as UserPreference object
     /// </summary>
     /// <param name="filePath">FileName including file path</param>
@@ -228,8 +228,8 @@ class BinarySerialization : ISerialization
             return (UserPreference)binaryFormatter.Deserialize(stream);
         }
     }
-
-	/// <summary>
+    
+    /// <summary>
     /// Writes UserPreference object as Binary File
     /// </summary>
     /// <param name="obj">Object to write</param>
