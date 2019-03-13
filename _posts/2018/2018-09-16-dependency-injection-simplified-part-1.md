@@ -3,7 +3,7 @@ layout: single
 title: "Dependency Injection Simplified"
 date: 2018-09-16 -0800
 classes: wide
-categories: [design pattern]
+categories: [design_pattern]
 tags:
 - Dependency Injection
 - Code
@@ -323,4 +323,4 @@ And Adding a new key-value in *AppSettings* section of ***App.config*** file (Re
 
 This Factory class checks the ***App.config*** for serialization class name and use *Reflection* to instantiate the found class, which is then returned as ***ISerialization*** type object. This way you only have to change the value of serialization class name in ***App.config***  whenever you want to switch between **XMLSerialization** and **BinarySerialization** and spare yourself the continuous hassle of building and redeploying the assemblies.
 
-Usually we don't have to do all this work for implementing dependency injection as we have frameworks to help us with that. In next part, I will explain how we can use **Ninject**  (a popular framework for dependency injection) to achieve the same thing we did here.
+Even though we implemented everything from scratch here but usually you would use dependency injection framework to help you with this. In the next part, I will explain how we can use **Unity**  (a popular framework for dependency injection) to achieve the same thing as we did here.
