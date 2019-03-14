@@ -11,14 +11,14 @@ tags:
 - Unity
 ---
 
-In [Part 1](/blog/design_pattern/dependency-injection-simplified-part-1/) of this series, we refactored the code for serialization to make it decoupled using dependency injection. This saves us a lot for work in future when there's a change request. In this part, we are going to do the same using **Unity**, a popular framework for dependency injection.  Unity framework implements dependency injection in 2 parts:
+In [Part 1](/blog/design_pattern/dependency-injection-simplified-part-1/) of this series, we refactored the code for serialization to make it decoupled using dependency injection. This makes dealing with new requirement changes and code maintainability, a lot more easier. In this part, we are going to do the same using **Unity**, a popular framework for dependency injection.  Unity framework implements dependency injection in 2 parts:
 
 1. **Registration:**
 
-   First you register an interface with it's desired associated class. This is how you tell Unity which object of a class to instantiate for a particular interface. Registration is typcially done at the start of program.
+   First you register an interface with it's desired associated class. This is how you tell Unity which object of a class to instantiate (among all classes implementing an interface) for a particular interface. Registration is typically done at the start of program.
 
-2. **Resolution: **
-    This is the part where you resolve an  interface to get an object of class associated with it. Note that you can associate an interface with either a single class or multiple classes. In latter case, you need to give all associations a name to identify them. we will use named registration in our example below.
+2. **Resolution:**
+    This is the part where you resolve an  interface to get an object of class associated with it. Note that you can associate an interface with either a *single* class or *multiple* classes. In latter case, you need to give all associations a name to identify them. we will use named registration in our example below.
 
 Now lets start by installing Unity through nuget package manager console:
 
@@ -31,7 +31,7 @@ In out project, lets make an interface for serialization:
 ```csharp
 interface ISerialization
 {
-    //UserPreference is a POCO class to be serialized/deserialized
+    //UserPreference is a POCO class to be (de)serialized
     void WriteFile(UserPreference obj, string filePath, bool append = false);
     UserPreference ReadFile(string filePath);
 }
@@ -150,7 +150,7 @@ class Factory
 
 
 
-With this single **Factory** class, we are almost done. Now you just need to call ***RegisterInterfaces()*** at start of your main class:
+With just this single **Factory** class, we are almost done. Now you just need to call ***RegisterInterfaces()*** at start of your main class:
 
 
 ```csharp
@@ -160,14 +160,14 @@ objFactory.RegisterInterfaces();
 
 
 
-And then whenever we want to serialize/deserialize  a file, call the **resolve** function to get *serializer* object:
+And then whenever we want to serialize/deserialize  a file, call the **resolve** function to get the *serializer* object:
 
 ```csharp
 var serializer = objFactory.Resolve<ISerialization>("XML");
 ```
 
 
-And use this *serializer* object to write to and read from this file:
+And use this *serializer* object to write/read from the file:
 
 ```csharp
 UserPreference Preference = new UserPreference();
