@@ -11,7 +11,7 @@ tags:
 - Unity
 ---
 
-In [Part 1](/design_pattern/dependency-injection-simplified-part-1/) of this series, we refactored the code for serialization to make it decoupled using dependency injection. This saves us a lot for work in future when there's a change request. In this part, we are going to do the same using **Unity**, a popular framework for dependency injection.  Unity framework implements dependency injection in 2 parts:
+In [Part 1](/blog/design_pattern/dependency-injection-simplified-part-1/) of this series, we refactored the code for serialization to make it decoupled using dependency injection. This saves us a lot for work in future when there's a change request. In this part, we are going to do the same using **Unity**, a popular framework for dependency injection.  Unity framework implements dependency injection in 2 parts:
 
 1. **Registration:**
 
@@ -180,4 +180,4 @@ Preference = serializer.ReadFile("UserPrefsFile");
 
 
 
-That should get your serialization up and running!
+This should get you started on using Unity for dependency injection. For further information, you can check out Unity's [Official site](https://unitycontainer.github.io/articles/introduction.html).
