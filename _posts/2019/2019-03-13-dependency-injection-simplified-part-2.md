@@ -18,7 +18,7 @@ In [Part 1](/design_pattern/dependency-injection-simplified-part-1/) of this ser
    First you register an interface with it's desired associated class. This is how you tell Unity which object of a class to instantiate for a particular interface. Registration is typcially done at the start of program.
 
 2. **Resolution: **
-  This is the part where you resolve an  interface to get an object of class associated with it. Note that you can associate an interface with either a single class or multiple classes. In latter case, you need to give all associations a name to identify them. we will use named registration in our example below.
+    This is the part where you resolve an  interface to get an object of class associated with it. Note that you can associate an interface with either a single class or multiple classes. In latter case, you need to give all associations a name to identify them. we will use named registration in our example below.
 
 Now lets start by installing Unity through nuget package manager console:
 
@@ -31,7 +31,7 @@ In out project, lets make an interface for serialization:
 ```csharp
 interface ISerialization
 {
-    //UserPreference is data model class
+    //UserPreference is a POCO class to be serialized/deserialized
     void WriteFile(UserPreference obj, string filePath, bool append = false);
     UserPreference ReadFile(string filePath);
 }
