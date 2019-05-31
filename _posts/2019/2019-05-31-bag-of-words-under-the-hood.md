@@ -73,7 +73,6 @@ The problem with above approach is that words with highly frequency tend to hold
 **IDF** stands for *Inverse Document Frequency*. It's a measure for how common the term is, across all the documents in corpus.
 
 
-```
 \\[
 \large w_{i,j} =  tf_{i,j} * log (\frac{N}{df_{i}})
 \\]
@@ -87,7 +86,7 @@ N = Total documents,
 $\large tf_{i,j}$ = Term frequency for $\large i_{th}$ term in $\large j_{th}$ document,
 
 $\large df_{i}$   = Document frequency i.e. No. of documents with the $\large i_{th}$ term
-```
+
 
 
 
