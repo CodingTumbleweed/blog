@@ -74,15 +74,15 @@ The problem with above approach is that words with highly frequency tend to hold
 
 
 ```
-\begin{equation*}
+\\[
 \large w_{i,j} =  tf_{i,j} * log (\frac{N}{df_{i}})
-\end{equation*}
+\\]
 
 Here 
 
 N = Total documents,
 
-$\large w_{i,j}$  = Weight for $\large i_{th}$ term in $\large j_{th}$ document,
+\\( \large w_{i,j}$ \\) = Weight for $\large i_{th}$ term in $\large j_{th}$ document,
 
 $\large tf_{i,j}$ = Term frequency for $\large i_{th}$ term in $\large j_{th}$ document,
 
