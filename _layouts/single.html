@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-<!-- Adding script for mathjax -->
-<script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -72,6 +68,11 @@ layout: default
       {% include comments.html %}
     {% endif %}
   </article>
+    
+ <!-- Adding script for mathjax -->
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
