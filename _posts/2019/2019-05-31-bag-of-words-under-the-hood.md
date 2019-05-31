@@ -81,11 +81,11 @@ Here
 
 N = Total documents,
 
-\\( \large w_{i,j}$ \\) = Weight for $\large i_{th}$ term in $\large j_{th}$ document,
+\\( \large w_{i,j} \\)  = Weight for \\( \large i_{th} \\) term in \\( \large j_{th} \\) document,
 
-$\large tf_{i,j}$ = Term frequency for $\large i_{th}$ term in $\large j_{th}$ document,
+\\( \large tf_{i,j} \\) = Term frequency for \\( \large i_{th} \\) term in \\( \large j_{th} \\) document,
 
-$\large df_{i}$   = Document frequency i.e. No. of documents with the $\large i_{th}$ term
+\\( \large df_{i} \\)   = Document frequency i.e. No. of documents with the \\( \large i_{th} \\) term
 
 
 
