@@ -16,7 +16,7 @@ Before feeding textual data into a machine learning model, we need to extract fe
 
 
 
-#### Count Vectorization:
+### Count Vectorization:
 
 It's the most simple form of bag of words' representation, which returns *vocabulary of words* and the related *frequency vectors*. Let's try an example. For corpus with 3 documents:
 
@@ -48,7 +48,7 @@ It's almost always the case that ***stop words*** are removed from text before a
 
 
 
-#### N-Grams
+### N-Grams
 
 Lot of entities are there which are named using multiple words e.g. bus stop, high school, happy birthday, Four seasons hotel, etc. If they are converted into single word features, they will lose their context meaning. We use n-gram to avoid this issue. ***n-grams*** can be thought of as a technique to group **n** number of words and build vocabulary using these grouped words. In case of *bigram* (or 2-gram), features of above corpus would look like:
 
@@ -64,7 +64,7 @@ The frequency vectors will now have frequency for these word groupings. It's als
 
 
 
-#### TF-IDF
+### TF-IDF
 
 The problem with above approach is that words with highly frequency tend to hold more weight, even if they are not that relevant, for example, there can be a domain specific word that's highly frequent in domain related document but it's non relevant in all other documents' context. Here
 
@@ -95,7 +95,7 @@ $\large df_{i}$   = Document frequency i.e. No. of documents with the $\large i_
 
 
 
-#### Hashing Trick
+### Hashing Trick
 
 In real world, Bag of words representation is highly prone to exploit. A popular example of this is how, in early days, spammers used to evade spam filters by using words that are not in vocabulary of classification model like ***PR1ZE, w0n, thousandz***, etc. To fix this issue, you would need to include these words in your model vocabulary which isn't as easy as it may sounds. Each time you include new words to vocabulary, the resulting feature vectors’ size will change and you would need to retrain the model to expect feature vectors with this new size. 
 
