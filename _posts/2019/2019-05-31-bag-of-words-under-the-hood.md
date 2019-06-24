@@ -110,7 +110,7 @@ MD5Hash('The cat got chased by dog')	=>	db022bfeaa78f30c9e419b75fc490adf
 
 
 
-The cool thing about hashing function's that given the same input, it will always return same output. That's why it's also commonly used to authenticate binary files after downloading from remote source. We can use the hashing trick to map our feature vectors to **'Hash table'** and use the *hash table* as input to model. This way, if any new *word* gets introduced to vocabulary, our input vector size will remain same. 
+The cool thing about hashing function's that given the same input, it will always return same output. That's why it's also commonly used to authenticate binary files after downloading from remote source. We can use the hashing trick to map our feature vectors to **'Hash Function'** and use the *hashed vector* as input to model. This way, if any new *word* gets introduced to vocabulary, our input vector size will remain same.
 
 Hashing trick makes it quite easy to scale our model to fit large datasets but as the dataset size increases, we will eventually encounter ***hash collision***. Hash collision occurs when hashing function returns the same output value for two different inputs. It's happens because you have more items to hash than your slots in hash table. To avoid this issue, we can set the output size to be a large number (*Sklearn uses 2**20 as default*).
 
