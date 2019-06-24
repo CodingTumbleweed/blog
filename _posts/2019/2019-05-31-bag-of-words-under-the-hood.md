@@ -20,9 +20,11 @@ Before feeding textual data into a machine learning model, we need to extract fe
 
 It's the most simple form of bag of words' representation, which returns *vocabulary of words* and the related *frequency vectors*. Let's try an example. For corpus with 3 documents:
 
-*Document 1*:	The cat got chased by dog
-*Document 2*:	The cat jumped on a tree
-*Document 3*:	The dog kept barking beneath the tree
+***Document 1***:	The cat got chased by dog
+
+***Document 2***:	The cat jumped on a tree
+
+***Document 3***:	The dog kept barking beneath the tree
 
 
 
