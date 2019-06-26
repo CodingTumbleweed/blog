@@ -68,7 +68,7 @@ The frequency vectors will now have frequency for these word groupings. It's als
 
 ### TF-IDF
 
-The problem with above approach is that words with highly frequency tend to hold more weight, even if they are not that relevant, for example, there can be a domain specific word that's highly frequent in domain related document but it's non relevant in all other documents' context. Here
+The problem with above approach is that words with highly frequency tend to hold more weight, even if they are not that relevant, for example, words like ***seen***, ***asked*** and ***went*** are pretty common in news articles and if you were to build news recommendation system where these words are given more weight, your system would recommend. Here the system would recommend articles with these words in them. This is not something you want. On the other side, model where more weight is given to low frequency words like ***soccer***, ***president*** and ***Jurassic***, articles containing these words would be recommended and users are lot more likely to open them. This can be achieved by using TF-IDF vectorization. Here
 
 **TF** stands for *term frequency*. It's a frequency for a term in some document.
 
