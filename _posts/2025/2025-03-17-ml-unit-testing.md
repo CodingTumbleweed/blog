@@ -12,9 +12,9 @@ tags:
 
 Unlike traditional software, ML code has a higher likelihood of being non-deterministic (running the same code multiple times **with the same inputs and configuration** can produce different outputs) due to factors like random weight initialization, data shuffling, random batch sampling in stochastic algorithms, dropout layers, multi-threading / multi-GPU training, etc. Non-deterministic nature of machine learning process makes it hard to follow conventional unit testing practice. 
 
-### Best Practices for Unit Testing ML Code
+## Best Practices for Unit Testing ML Code
 
-#### 1. Avoid Testing End-to-End Training
+### 1. Avoid Testing End-to-End Training
 
 Unit test should be focused on small, isolated functions. Testing the entire training process makes the test slow, hard to debug, and non-deterministic.
 
@@ -38,7 +38,7 @@ def test_model_output_shape():
 
 
 
-#### 2. Avoid self-fulfilling Tests 
+### 2. Avoid self-fulfilling Tests 
 
 It's stupid but we still end up doing it. Don't use the same function you are trying to test in the unit test itself
 
@@ -65,7 +65,7 @@ def test_normalize():
 
 
 
-#### 3. Use Approx Comparison for Float Point Numbers
+### 3. Use Approx Comparison for Float Point Numbers
 
 Directly comparing two float-point values can lead to false negatives, due to [precision error](https://learn.microsoft.com/en-us/cpp/build/why-floating-point-numbers-may-lose-precision?view=msvc-170).
 
@@ -89,7 +89,7 @@ def test_mse_loss():
 
 
 
-#### 4. Mock External Dependencies
+### 4. Mock External Dependencies
 
 Replace any code dependencies on external resources like DB, API, or cloud storage with mocks. Unit test should be testing your code, and shouldn't need to account for network failure, missing files on storage or data issues. 
 
@@ -112,7 +112,7 @@ class TestModelAPI(unittest.TestCase):
 
 
 
-#### 5. **Use Minimal & Synthetic Data**
+### 5. **Use Minimal & Synthetic Data**
 
 Unit test are meant to be quick proxy for real world execution. Introducing huge datasets will make it slow, and resource intensive (*CI/CD servers are not usually built for resource-intensive tasks*)
 
@@ -120,9 +120,9 @@ Unit test are meant to be quick proxy for real world execution. Introducing huge
 small_data = torch.tensor([[1.0, 2.0], [3.0, 4.0]])
 ```
 
-### 
 
-#### 6. Use Seed For Random Data
+
+### 6. Use Seed For Random Data
 This ensures that your result are reproducible, and tests don't randomly fail.
 
 ```python
@@ -140,9 +140,9 @@ def test_random_data():
 		
 ```
 
-### 
 
-#### 7. Include Edge Cases
+
+### 7. Include Edge Cases
 
 It's convenient to include just the expected input and output in your unit test, and forgot to account for any edge cases but that makes your test non-robust.   
 
